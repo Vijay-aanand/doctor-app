@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Announcements</title>
+</head>
+<body>
+    <h1>Announcements</h1>
+    <ul>
+        {% for announce in announces %}
+            <li>
+                <h2>{{ announce.title }}</h2>
+                <p>{{ announce.text }}</p>
+                {% if announce.image %}
+                    <img src="{{ announce.image.url }}" alt="{{ announce.title }}">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

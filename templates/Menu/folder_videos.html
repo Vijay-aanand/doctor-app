@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Video List</title>
+</head>
+
+<body>
+    <h1>Video List</h1>
+    <ul>
+        {% for video in videos %}
+        <li>
+            <h2>{{ video.title }}</h2>
+            <p>{{ video.description }}</p>
+            <a href="{{ video.url }}">Play</a>
+            <form action="{% url 'save_video' video.id %}" method="post">
+                {% csrf_token %}
+                <button type="submit">Save Video</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>

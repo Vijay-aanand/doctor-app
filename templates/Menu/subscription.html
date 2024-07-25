@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Subscription{% endblock %}
+
+{% block content %}
+    <h1>Your Subscription</h1>
+    <ul>
+        {% for subscription in subscriptions %}
+            <li>{{ subscription.plan.name }}: {{ subscription.start_date }} to {{ subscription.end_date }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

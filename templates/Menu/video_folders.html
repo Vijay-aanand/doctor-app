@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ video.title }} - Folders</title>
+</head>
+<body>
+    <h1>Folders containing {{ video.title }}</h1>
+    <ul>
+        {% for folder in folders %}
+            <li><a href="{% url 'folder_videos' folder.id %}">{{ folder.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'video_list' %}">Back to video list</a>
+</body>
+</html>

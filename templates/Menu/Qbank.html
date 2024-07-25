@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QBank</title>
+ 
+</head>
+<body>
+    <h1>QBank List</h1>
+    <div class="qbank-list">
+        {% for qbank in qbanks %}
+            <div class="qbank-item">
+                <h2>{{ qbank.title }}</h2>
+                {% if qbank.image %}
+                    <img src="{{ qbank.image.url }}" alt="{{ qbank.title }}">
+                {% endif %}
+                <p>{{ qbank.content }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

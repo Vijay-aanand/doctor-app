@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Points</title>
+</head>
+<body>
+    <h1>My Points</h1>
+    <ul>
+        {% for point in points %}
+            <li>{{ point.points }} points - {{ point.description }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

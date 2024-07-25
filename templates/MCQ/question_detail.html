@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ question.question_text }}</title>
+</head>
+      <li>{{ question.question_text }}</li>
+    <ul>a.{{ question.option_1 }}</ul>
+    <ul>b.{{ question.option_2 }}</ul>
+    <ul>c.{{ question.option_3 }}</ul>
+    <ul>d.{{ question.option_4 }}</ul>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

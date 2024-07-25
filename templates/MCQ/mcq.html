@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MCQ List</title>
+</head>
+<body>
+    <h1>MCQ List</h1>
+    <ul>
+        {% for mcq in mcqs %}
+            <li>{{ mcq.title }} </li>
+                <p>{{ mcq.content }}</p> 
+        {% endfor %}
+    </ul>
+</body>
+</html>

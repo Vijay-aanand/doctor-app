@@ -1,0 +1,19 @@
+<!-- templates/menu/saved_videos.html -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saved Videos</title>
+</head>
+<body>
+    <h1>Saved Videos</h1>
+    <ul>
+        {% for saved_video in saved_videos %}
+            <li>
+                <h2>{{ saved_video.video.title }}</h2>
+                <p>{{ saved_video.video.description }}</p>
+                <a href="{{ saved_video.video.url }}">Play</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
