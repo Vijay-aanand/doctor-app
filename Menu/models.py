@@ -11,6 +11,8 @@ class Folder(models.Model):
     def _str_(self):
         return self.name  
 
+        
+
 class Plan(models.Model):    
     name = models.CharField(max_length=100)
     description = models.TextField()
